@@ -5,7 +5,7 @@ from database.models import User,Task
 from api.constants import database_name,database_password
 
 app = Flask(__name__)
-DB_URL="mongodb+srv://oguzhan:{}@cluster0.nupmm.mongodb.net/{}?retryWrites=true&w=majority".format(database_password,database_password)
+DB_URL="mongodb+srv://oguzhan:{}@cluster0.nupmm.mongodb.net/{}?retryWrites=true&w=majority".format(database_password,database_name)
 app.config['MONGODB_HOST'] = DB_URL
 
 db=MongoEngine()
