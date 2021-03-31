@@ -5,8 +5,8 @@ from flask_restful import Resource
 
 class Tasks(Resource):
     def get(self):
-        movies = Task.objects().to_json()
-        return Response(movies, mimetype="application/json", status=200)
+        tasks = Task.objects().to_json()
+        return Response(tasks, mimetype="application/json", status=200)
 
     def post(self):
         body = request.get_json()
