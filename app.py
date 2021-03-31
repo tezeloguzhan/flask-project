@@ -1,9 +1,7 @@
 from flask import Flask, jsonify, request,make_response,jsonify
 from flask_mongoengine import MongoEngine
-from database.database import initialize_db
 from database.models import User,Task
-from flask_restful import Api
-from api.routes import initialize_routes
+#Güvenlik
 from api.constants import database_name,database_password
 
 app = Flask(__name__)
